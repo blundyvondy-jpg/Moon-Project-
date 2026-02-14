@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Valentine's Day, Sara</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              script: ['"Dancing Script"', 'cursive'],
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['"Lato"', 'sans-serif'],
+            },
+            colors: {
+              rose: {
+                350: '#F48FB1', // Custom pink
+              },
+              hydrangea: {
+                blue: '#D1E8FF',
+                purple: '#E0D1FF',
+                pink: '#F8D1E8',
+                white: '#F9FAFB'
+              },
+              tangled: {
+                dark: '#0f172a',
+                purple: '#2e1065',
+                gold: '#fbbf24',
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'sway': 'sway 3s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'drift-up': 'driftUp 20s linear infinite',
+              'sway-x': 'swayX 5s ease-in-out infinite',
+              'wind': 'wind 6s ease-in-out infinite',
+              'petal-flutter': 'petalFlutter 4s ease-in-out infinite',
+              'lantern-float': 'lanternFloat 15s ease-in infinite',
+              'twinkle': 'twinkle 3s ease-in-out infinite',
+              'bird-fly': 'birdFly 20s linear infinite',
+              'bird-flap': 'birdFlap 0.5s ease-in-out infinite alternate',
+              'grass-sway': 'grassSway 2s ease-in-out infinite alternate',
+              'drift-cloud': 'driftCloud 60s linear infinite',
+              'waterfall': 'waterfall 2s linear infinite',
+              'mist-rise': 'mistRise 4s ease-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              sway: {
+                '0%, 100%': { transform: 'rotate(-2deg)' },
+                '50%': { transform: 'rotate(2deg)' },
+              },
+              driftUp: {
+                '0%': { transform: 'translateY(110vh) rotate(0deg)' },
+                '100%': { transform: 'translateY(-20vh) rotate(45deg)' },
+              },
+              swayX: {
+                '0%, 100%': { transform: 'translateX(-15px)' },
+                '50%': { transform: 'translateX(15px)' },
+              },
+              wind: {
+                '0%': { transform: 'rotate(0deg)' },
+                '20%': { transform: 'rotate(-2deg)' },
+                '40%': { transform: 'rotate(1.5deg)' },
+                '60%': { transform: 'rotate(-1deg)' },
+                '80%': { transform: 'rotate(0.5deg)' },
+                '100%': { transform: 'rotate(0deg)' },
+              },
+              petalFlutter: {
+                '0%, 100%': { transform: 'scale(1)' },
+                '50%': { transform: 'scale(1.02)' },
+              },
+              lanternFloat: {
+                '0%': { transform: 'translateY(110vh) translateX(-20px)', opacity: 0 },
+                '10%': { opacity: 0.8 },
+                '50%': { transform: 'translateY(50vh) translateX(20px)' },
+                '90%': { opacity: 0.8 },
+                '100%': { transform: 'translateY(-20vh) translateX(-20px)', opacity: 0 },
+              },
+              twinkle: {
+                '0%, 100%': { opacity: 0.3, transform: 'scale(1)' },
+                '50%': { opacity: 1, transform: 'scale(1.2)' },
+              },
+              birdFly: {
+                '0%': { transform: 'translateX(-100px) translateY(0)' },
+                '25%': { transform: 'translateX(30vw) translateY(20px)' },
+                '50%': { transform: 'translateX(60vw) translateY(-10px)' },
+                '75%': { transform: 'translateX(80vw) translateY(10px)' },
+                '100%': { transform: 'translateX(120vw) translateY(0)' },
+              },
+              birdFlap: {
+                '0%': { transform: 'translateY(0)' },
+                '100%': { transform: 'translateY(-3px)' }, // Subtle flap
+              },
+              grassSway: {
+                '0%': { transform: 'rotate(-5deg)' },
+                '100%': { transform: 'rotate(5deg)' },
+              },
+              driftCloud: {
+                '0%': { transform: 'translateX(-20%)' },
+                '100%': { transform: 'translateX(120vw)' },
+              },
+              waterfall: {
+                '0%': { transform: 'translateY(0)' },
+                '100%': { transform: 'translateY(50px)' }
+              },
+              mistRise: {
+                '0%': { transform: 'translateY(0) scale(1)', opacity: 0.4 },
+                '100%': { transform: 'translateY(-20px) scale(1.5)', opacity: 0 }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      /* Custom scrollbar for reason text */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+        border-radius: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #fbcfe8; 
+        border-radius: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #f9a8d4; 
+      }
+      
+      /* Pattern for waterfall flow */
+      .bg-water-flow {
+        background-image: repeating-linear-gradient(180deg, rgba(255,255,255,0.4) 0, rgba(255,255,255,0.4) 10px, transparent 10px, transparent 20px);
+        background-size: 100% 40px;
+      }
+
+      @keyframes rose-pulse {
+        0%, 100% {
+          filter: brightness(1) drop-shadow(0 0 0px var(--glow-color));
+          transform: var(--base-transform) scale(1);
+        }
+        50% {
+          filter: brightness(1.3) drop-shadow(0 0 20px var(--glow-color));
+          transform: var(--base-transform) scale(1.15);
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
